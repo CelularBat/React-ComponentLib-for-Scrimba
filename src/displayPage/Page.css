@@ -1,0 +1,33 @@
+.Page{
+    width:100%;
+    height: 100%;
+    display:grid;
+    grid-template: 
+        "head head head" 100px
+        "nav main main" auto
+        /
+        200px auto auto;
+
+    font-family: "Permanent Marker", cursive;
+    color:black;
+}
+
+.Header{
+    grid-area: head;
+    background-color: green;
+}
+.Navbar{
+    grid-area: nav;
+    background-color: gray;
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:5%;
+
+    padding:10px 4px;
+}
+.MainPage{
+    grid-area:main;
+}
