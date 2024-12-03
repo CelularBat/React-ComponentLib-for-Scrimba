@@ -19,7 +19,7 @@
 .Navbar{
     grid-area: nav;
     z-index: 0;
-    max-height: calc(max(100vh - 100px, 400px));
+    height: calc(max(100vh - 100px, 400px));
 
     background: linear-gradient(
         to right,
@@ -40,6 +40,13 @@
     
 
     padding:10px 4px;
+
+    position:relative;
+    top:initial;
+}
+.Navbar.sticky{
+    position:fixed;
+    top:0;
 }
 .MainPage{
     grid-area:main;
@@ -52,6 +59,8 @@
 
     display: grid;
     place-items: center;
+
+    padding-bottom: 30px;
 }
 
 .flexCol{
@@ -79,4 +88,10 @@
     margin:0;
     color:#5E5D5D;
     font-size: 44px;
+}
+
+.arrayLabel-sm{
+    margin:0;
+    color:#5E5D5D;
+    font-size: 30px;
 }

@@ -95,10 +95,229 @@
     color: #92400E;
 }
 
-.CompLib-Banner.neutral{
+.CompLib-Banner.info{
     color: #1C51B9;
     background-color: #EFF6FF;
 }
-.CompLib-Banner.neutral .header{
+.CompLib-Banner.info .header{
+    color: #1E40AF;
+}
+
+/* Tooltip */
+
+.CompLib-Tooltip{
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 400;
+
+    width:384px;
+    height: 70px;
+    border-radius: 8px;
+    padding:16px;
+    gap:16px  !important;
+
+    position:relative;
+
+    box-shadow: 0px 4px 6px -2px #0000000D;
+
+    box-shadow: 0px 10px 15px -3px #0000001A;
+
+}
+.CompLib-Tooltip::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 96px;
+    top: 92px;
+    width: 20px;
+    height: 20px;
+ 
+    background-color: inherit;
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+    
+
+.CompLib-Tooltip .icon, .CompLib-Tooltip .iconX ,.CompLib-Tooltip .msg-container{
+    align-self: flex-start;
+}
+.CompLib-Tooltip .header{
+    font-weight: 500;
+}
+.CompLib-Tooltip .iconX{
+    cursor:grab;
+}
+
+.CompLib-Tooltip.bold.black{
+    background-color: #262626;
+    color: #C7C7C7;
+}
+.CompLib-Tooltip.bold.black .header{
+    color: #FFFFFF;
+}
+.CompLib-Tooltip.bold.black .icon{
+    stroke: #C7C7C7;
+}
+.CompLib-Tooltip.bold.black .iconX{
+    fill: #C7C7C7;
+}
+
+.CompLib-Tooltip.bold.blue{
+    background-color: #1E40AF;
+    color: #E8EDFF;
+}
+.CompLib-Tooltip.bold.blue .header{
+    color: #FFFFFF;
+}
+.CompLib-Tooltip.bold.blue .icon{
+    stroke: #7EA6F2;
+}
+.CompLib-Tooltip.bold.blue .iconX{
+    fill: #D8D8D8;
+}
+
+.CompLib-Tooltip.bold.pink{
+    background-color: #A9229B;
+    color: #FFE9FD;
+}
+.CompLib-Tooltip.bold.pink .header{
+    color: #FFFFFF;
+}
+.CompLib-Tooltip.bold.pink .icon{
+    stroke: #F462E6;
+}
+.CompLib-Tooltip.bold.pink .iconX{
+    fill:  #D8D8D8;
+}
+
+.CompLib-Tooltip.bold.green{
+    background-color: #47AA5D;
+    color: #E3FFE9;
+}
+.CompLib-Tooltip.bold.green .header{
+    color: #FFFFFF;
+}
+.CompLib-Tooltip.bold.green .icon{
+    stroke: #C1FFCF;
+}
+.CompLib-Tooltip.bold.green .iconX{
+    fill: #D8D8D8;
+}
+
+.CompLib-Tooltip.light.black{
+    background-color: #FFFFFF;
+    color: #6B7280;
+}
+.CompLib-Tooltip.light.black .header{
+    color: #111827;
+}
+.CompLib-Tooltip.light.black .icon{
+    stroke: #6B7280;
+}
+.CompLib-Tooltip.light.black .iconX{
+    fill: #6B7280;
+}
+
+.CompLib-Tooltip.light.blue{
+    background-color: #E0E7FF;
+    color: #1C51B9;
+}
+.CompLib-Tooltip.light.blue .header{
+    color: #1E40AF;
+}
+.CompLib-Tooltip.light.blue .icon{
+    stroke: #1C51B9;
+}
+.CompLib-Tooltip.light.blue .iconX{
+    fill: #1C51B9;
+}
+
+.CompLib-Tooltip.light.pink{
+    background-color:#FFF3FC ;
+    color: #C7369E;
+}
+.CompLib-Tooltip.light.pink .header{
+    color: #A9229B;
+}
+.CompLib-Tooltip.light.pink .icon{
+    stroke: #C7369E;
+}
+.CompLib-Tooltip.light.pink .iconX{
+    fill: #C7369E;
+}
+
+.CompLib-Tooltip.light.green{
+    background-color: #E7FFF3;
+    color: #41A557;
+}
+.CompLib-Tooltip.light.green .header{
+    color: #137A2A;
+}
+.CompLib-Tooltip.light.green .icon{
+    stroke: #41A557;
+}
+.CompLib-Tooltip.light.green .iconX{
+    fill: #41A557;
+}
+
+/* Toast */
+
+.CompLib-Toast{
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 400;
+
+    width: 384px;
+    min-height: 78px;
+    padding:16px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px !important;
+
+    box-shadow: 0px 4px 6px -2px #0000000D;
+
+    box-shadow: 0px 10px 15px -3px #0000001A;
+
+}
+
+.CompLib-Toast .header{
+    font-weight: 500;
+}
+
+.CompLib-Toast.success{
+    color: #065F46;
+    background-color:#ECFDF5 ;  
+}
+.CompLib-Toast.success .header{
+    color: #047857;
+}
+
+.CompLib-Toast.warning{
+    color: #B45309;
+    background-color: #FFFBEB;
+}
+.CompLib-Toast.warning .header{
+    color: #92400E;
+}
+
+.CompLib-Toast.error{
+    color: #B45309;
+    background-color: #FEF2F2;
+}
+.CompLib-Toast.error .header{
+    color: #92400E;
+}
+
+.CompLib-Toast.info{
+    color: #1C51B9;
+    background-color: #EFF6FF;
+}
+.CompLib-Toast.info .header{
     color: #1E40AF;
 }
