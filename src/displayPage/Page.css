@@ -6,7 +6,7 @@
         "head head head" 100px
         "nav main main" auto
         /
-        200px auto auto;
+        min(200px, 30%) auto auto;
 
     font-family: "Permanent Marker", cursive;
     color:black;
@@ -14,20 +14,69 @@
 
 .Header{
     grid-area: head;
-    background-color: green;
+    z-index: 2;
 }
 .Navbar{
     grid-area: nav;
-    background-color: gray;
+    z-index: 0;
+    max-height: calc(max(100vh - 100px, 400px));
+
+    background: linear-gradient(
+        to right,
+        #d1d1d1, 
+        #a6a6a6, 
+        #808080,
+        #a6a6a6, 
+        #d1d1d1  
+    );
+    border: 1px solid #8c8c8c; 
+    box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.2), 
+                2px -2px 5px rgba(255, 255, 255, 0.2); 
 
     display:flex;
     flex-direction:column;
     align-items: center;
-    justify-content: center;
-    gap:5%;
+    justify-content: space-around;
+    
 
     padding:10px 4px;
 }
 .MainPage{
     grid-area:main;
+    background: linear-gradient(
+        135deg,               /* Diagonal gradient direction */
+        #f0fff0,              /* Light green (honeydew) */
+        #e5e7eb 40%,          /* White at 40% */
+        #f0fff0               /* Silver */
+    );
+
+    display: grid;
+    place-items: center;
+}
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+}
+
+.pageTitle{
+    font-size: 96px;
+    margin:0;
+}
+
+.arrayLabel{
+    margin:0;
+    color:#5E5D5D;
+    font-size: 44px;
 }

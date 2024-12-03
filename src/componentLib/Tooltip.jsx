@@ -7,6 +7,7 @@ function Tooltip({color,style,title,children,...rest}) {
 
     utils.verifyProp("style",style,styles);
     utils.verifyProp("color",color,colors);
+    
     return (
         <>
             

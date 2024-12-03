@@ -3,11 +3,26 @@
     text-align: center;
     font-size: 1.9rem;
 
-    border: 2px solid black;
     border-radius: 8px;
     padding: 3px 6px;
+
+    cursor:grabbing;
+
+    color: #22221082; 
+    text-shadow: 
+        -1px -1px 2px rgba(255, 255, 255, 0.8), 
+        1px 1px 2px rgba(0, 0, 0, 0.6); 
+    transform: translateZ(-6px); 
 }
 
-.NavbarItem.selected{
-    background-color: yellow;
+.NavbarItem.selected .NavbarItem--text{
+    color: #e1d3a7; 
+
+    text-shadow: 
+        0 0 5px #ffcc33,
+        0 0 10px #ffcc33, 
+        0 0 15px #ffcc33;
 }
+
+
+

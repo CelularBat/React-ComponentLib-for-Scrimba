@@ -1,40 +1,104 @@
 .CompLib-Badge{
+    min-width: 67px;
+    width: fit-content;
+    height: 24px;
+    padding: 2px 12px;
 
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 1.1em;
+    text-align: center;
+
+    border-radius: 4px;
 }
 
 .CompLib-Badge.pill{
-    
+    border-radius: 12px;
 }
 
 .CompLib-Badge.red{
-    color: ;
-    background-color: ;    
+    color: #991B1B;
+    background-color:#FEE2E2 ;    
 }
 .CompLib-Badge.green{
-    color: ;
-    background-color: ;    
+    color: #065F46;
+    background-color:#D1FAE5 ;    
 }
 .CompLib-Badge.yellow{
-    color: ;
-    background-color: ;    
+    color: #92400E;
+    background-color: #FEF3C7;    
 }
 .CompLib-Badge.gray{
-    color: ;
-    background-color: ;    
+    color: #1F2937;
+    background-color: #F3F4F6;    
 }
 .CompLib-Badge.blue{
-    color: ;
-    background-color: ;    
+    color: #1E40AF;
+    background-color: #DBEAFE;    
 }
 .CompLib-Badge.indigo{
-    color: ;
-    background-color: ;    
+    color: #3730A3;
+    background-color: #E0E7FF;    
 }
 .CompLib-Badge.purple{
-    color: ;
-    background-color: ;    
+    color: #5B21B6;
+    background-color: #EDE9FE;    
 }
 .CompLib-Badge.pink{
-    color: ;
-    background-color: ;    
+    color: #9D174D;
+    background-color: #FCE7F3;    
+}
+/* Banner*/
+.CompLib-Banner{
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 400;
+
+    width: 896px;
+    padding:16px;
+    border-radius: 6px;
+    gap:12px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.CompLib-Banner .msg-container{
+    gap:8px;
+}
+
+.CompLib-Banner .header{
+    font-weight: 500;
+}
+
+.CompLib-Banner.success{
+    color: #065F46;
+    background-color:#ECFDF5 ;  
+}
+.CompLib-Banner.success .header{
+    color: #047857;
+}
+
+.CompLib-Banner.warning{
+    color: #B45309;
+    background-color: #FFFBEB;
+}
+.CompLib-Banner.warning .header{
+    color: #92400E;
+}
+
+.CompLib-Banner.error{
+    color: #B45309;
+    background-color: #FEF2F2;
+}
+.CompLib-Banner.error .header{
+    color: #92400E;
+}
+
+.CompLib-Banner.neutral{
+    color: #1C51B9;
+    background-color: #EFF6FF;
+}
+.CompLib-Banner.neutral .header{
+    color: #1E40AF;
 }

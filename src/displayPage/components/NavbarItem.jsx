@@ -5,7 +5,7 @@ import classNames from 'classnames';
 function  NavbarItem({children,selected,onClick}) {
     return (
         <div className={classNames('NavbarItem', {selected})} onClick={onClick}>
-            {children}
+            <div className="NavbarItem--text">{children}</div>
         </div>
     );
 }

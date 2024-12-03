@@ -1,10 +1,14 @@
 import React from 'react';
+import './Header.css';
 
 function Header({}) {
     return (
         <div className='Header'>
-            <h1>Component Library for Scrimba</h1>
-            <span></span>
+            <h1>React Component Library for Scrimba</h1>
+            <a href="https://github.com/CelularBat/React-ComponentLib-for-Scrimba">
+             https://github.com/CelularBat/React-ComponentLib-for-Scrimba
+            </a>
+            <span>by CelularBat</span>
         </div>
     );
 }
