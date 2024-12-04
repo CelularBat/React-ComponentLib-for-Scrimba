@@ -1,16 +1,21 @@
 import React from 'react';
-import './Toasts.css'
 import CompLib from '../../componentLib/CompLib_index';
+import { nanoid } from 'nanoid';
+
 
 function  Toasts({}) {
+    const [PickedToastType,setPickedToastType] = React.useState();
+
     const statuses = ["success",'warning',"error",'info'];
 
     const showStatuses = statuses.map((status) => { 
       return(
-        <CompLib.Toast status={status}>
+        <CompLib._Toast_static key={nanoid()} status={status} 
+        onClick={()=>setPickedToastType(status)} style={{cursor:"grab"}}>
 
-        </CompLib.Toast>); 
+        </CompLib._Toast_static>); 
     });
+
     return (
         <div className='Toasts'>
             <h1 className='pageTitle'>Toasts</h1>
@@ -18,6 +23,16 @@ function  Toasts({}) {
                 {showStatuses}
             </div>
             
+            { PickedToastType && 
+                
+                    <CompLib.Toast status={PickedToastType} title="Test !"
+                    posY="10vh" posX="50vw" timeOut={5000} animated={true}
+                    >
+                        Toast status="{PickedToastType}
+                    </CompLib.Toast>
+               
+            }
+
         </div>
     );
 }

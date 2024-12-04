@@ -149,6 +149,10 @@
 .CompLib-Tooltip .iconX{
     cursor:grab;
 }
+.CompLib-Tooltip .msg-container{
+    min-width: 306px;
+}
+
 
 .CompLib-Tooltip.bold.black{
     background-color: #262626;
@@ -321,3 +325,98 @@
 .CompLib-Toast.info .header{
     color: #1E40AF;
 }
+
+.CompLib-Toast.animated{
+    animation: spawnAndMove1 3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@keyframes spawnAndMove1 {
+    0% {
+        opacity: 0; /* Initial state: hidden */
+        transform: translateX(0);
+    }
+    10% {
+        opacity: 1; /* Become visible quickly */
+        transform: translateX(0);
+    }
+    60% {
+        opacity: 1; /* Stay in place */
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50vw); /* Move left by 50% of the viewport width */
+    }
+}
+
+
+/* Card */
+.CompLib-Card{
+    width: 386px;
+    min-height: 208px;
+    background-color: #F9FAFB;
+
+    padding: 0 24px 32px 24px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:32px;
+    position:static;
+}
+
+.CompLib-Card:hover{
+    box-shadow: 0px 4px 25px 0px #0000001A;
+
+}
+
+.CompLib-Card .header{
+    color: #111827;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.CompLib-Card .text{
+    color:#6B7280;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.CompLib-Card .icon{
+    position:relative;
+    top:-24px;
+    width: 48px;
+    height: 48px;
+    gap: 0px;
+    border-radius: 6px;
+    opacity: 0px;
+    box-shadow: 0px 4px 6px -2px #0000000D;
+
+    box-shadow: 0px 10px 15px -3px #0000001A;
+
+    display:grid;
+    place-content: center;
+    
+}
+
+.CompLib-Card .icon:hover{  
+    box-shadow: 0px 4px 6px -2px #0000000D;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+
+}
+
+.CompLib-MagicPortal{
+    position:absolute;
+}
+
+
+

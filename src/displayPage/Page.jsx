@@ -8,20 +8,20 @@ function Page({}) {
     const [SelectedTabIdx,setSelectedTabIdx] = React.useState(0);
     const [IsNavSticky,setIsNavSticky] = React.useState(false);
 
-    // React.useEffect(() => {
-    //     const handleScroll = () => {
-    //         console.log(window.scrollY , IsNavSticky);
-    //         if ( window.scrollY < 100){
-    //             setIsNavSticky(false);
-    //         }
-    //         if (window.scrollY > 100){
-    //             setIsNavSticky(true);
-    //         }
+    React.useEffect(() => {
+        const handleScroll = () => {
+
+            if ( window.scrollY < 100){
+                setIsNavSticky(false);
+            }
+            if (window.scrollY > 100){
+                setIsNavSticky(true);
+            }
             
-    //     };
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className='Page'>

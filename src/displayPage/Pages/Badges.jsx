@@ -1,5 +1,4 @@
 import React from 'react';
-import './Badges.css'
 import CompLib from '../../componentLib/CompLib_index';
 import { nanoid } from 'nanoid';
 

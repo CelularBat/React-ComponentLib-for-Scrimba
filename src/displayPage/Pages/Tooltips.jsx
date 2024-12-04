@@ -1,26 +1,58 @@
 import React from 'react';
-import './Tooltips.css'
 import CompLib from '../../componentLib/CompLib_index';
 import { nanoid } from 'nanoid';
+
 
 function  Tooltips({}) {
     const colors= ["black","blue","pink","green"];
     const styles = ["light","bold"];
 
+     const [TooltipProps,setTooltipProps] = React.useState(
+        {color: "black",
+        type:"light", 
+        title:'Check me out!',
+        text: "Check me out!",
+        posX: "3000px",
+        posY: "3000px"
+
+     });
+
 
     const showLight = colors.map((color) => { 
       return(
-        <CompLib.Tooltip key={nanoid()} title="Archive notes" style="light" color={color}>
+        <CompLib._Tooltip_static key={nanoid()} title="Archive notes" type="light" color={color}
+        style={{cursor:"grab"}}
+        onClick={(e)=>{setTooltipProps( prev=>
+            ({...prev,
+                color: color,
+                type: "light",
+                text: `type="light" color="${color}"`,
+                posX: `${e.clientX}px`,
+                posY: `${e.clientY}px`
+
+            }) 
+        )}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.
-        </CompLib.Tooltip>
+        </CompLib._Tooltip_static>
       ); 
     });
 
     const showBold = colors.map((color) => { 
         return(
-          <CompLib.Tooltip key={nanoid()}  title="Archive notes" style="bold" color={color}>
+          <CompLib._Tooltip_static key={nanoid()}  title="Archive notes" type="bold" color={color}
+          style={{cursor:"grab"}}
+          onClick={(e)=>{setTooltipProps( prev=>
+                ({...prev,
+                    color: color,
+                    type: "bold",
+                    text: `type="bold" color="${color}"`,
+                    posX: `${e.clientX}px`,
+                    posY: `${e.clientY}px`
+
+                }) 
+          )}}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.
-          </CompLib.Tooltip>
+          </CompLib._Tooltip_static>
         ); 
       });
 
@@ -44,6 +76,10 @@ function  Tooltips({}) {
                 </div>
 
             </div>
+
+            <CompLib.Tooltip {...TooltipProps}>
+               {TooltipProps.text}
+            </CompLib.Tooltip>
 
 
 
