@@ -28,7 +28,7 @@ function  Toasts({}) {
                     <CompLib.Toast status={PickedToastType} title="Test !"
                     posY="10vh" posX="50vw" timeOut={5000} animated={true}
                     >
-                        Toast status="{PickedToastType}
+                        Toast status="{PickedToastType}"
                     </CompLib.Toast>
                
             }
