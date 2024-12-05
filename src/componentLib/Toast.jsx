@@ -34,7 +34,7 @@ function Toast({posX="40vw",posY="70vh",timeOut,initialState=false,
         return ()=>{
             if (tO_Ref.current) { clearTimeout(tO_Ref.current);}
         }
-    },[children]);
+    },[children,posX,posY]);
 
     return (
         <>
