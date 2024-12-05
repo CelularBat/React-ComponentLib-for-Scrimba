@@ -1,5 +1,5 @@
 import React from 'react';
-import Pages from './Pages/Pages_index';
+import {Pages} from './Pages/Pages_index';
 
 function MainPage({SelectedTabIdx}) {
 

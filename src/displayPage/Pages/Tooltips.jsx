@@ -1,6 +1,7 @@
 import React from 'react';
 import CompLib from '../../componentLib/CompLib_index';
 import { nanoid } from 'nanoid';
+import DisplayCode from '../components/DisplayCode';
 
 
 function  Tooltips({}) {
@@ -59,6 +60,12 @@ function  Tooltips({}) {
     return (
         <div className='Tooltips'>
             <h1 className='pageTitle'>Tooltips</h1>
+            <DisplayCode 
+                code= {`<CompLib.Tooltip colors="black|blue|pink|green|" type="bold|light" title="Title"
+posX="50vw" posY="10vh" timeOut={5000} {...rest}>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</CompLib.Tooltip>`} />
+            
        
             <div className='flexRow' style={{gap:"60px"}}>
                 <div>

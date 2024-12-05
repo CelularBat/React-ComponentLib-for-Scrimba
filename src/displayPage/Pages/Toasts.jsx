@@ -1,7 +1,7 @@
 import React from 'react';
 import CompLib from '../../componentLib/CompLib_index';
 import { nanoid } from 'nanoid';
-
+import DisplayCode from '../components/DisplayCode';
 
 function  Toasts({}) {
     const [PickedToastType,setPickedToastType] = React.useState();
@@ -19,6 +19,13 @@ function  Toasts({}) {
     return (
         <div className='Toasts'>
             <h1 className='pageTitle'>Toasts</h1>
+            <DisplayCode 
+                code= {`<CompLib.Toast status="success|warning|error|info" title="Title"
+posX="50vw" posY="10vh" timeOut={5000} animated={true|false} {...rest}>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</CompLib.Toast>`} />
+
+            <br/>
             <div className='container' style={{display:"grid",gridTemplate: "repeat(2, 1fr)/repeat(2, 1fr)" ,gap:"15px"}}>
                 {showStatuses}
             </div>

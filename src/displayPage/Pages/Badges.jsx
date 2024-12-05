@@ -1,6 +1,7 @@
 import React from 'react';
 import CompLib from '../../componentLib/CompLib_index';
 import { nanoid } from 'nanoid';
+import DisplayCode from '../components/DisplayCode';
 
 function  Badges({}) {
     const colors= ["gray",'red',"yellow",'green',"blue",'indigo',"purple","pink"];
@@ -17,6 +18,10 @@ function  Badges({}) {
     return (
         <div className='Badges'>
             <h1 className='pageTitle'>Badges</h1>
+            <DisplayCode 
+                code= {`<CompLib.Badge color="gray|red|yellow|green|blue|indigo|purple|pink" type="square|pill" {...rest}>
+    Badge
+</CompLib.Badge>`} />
             <div className='flexRow'>
                 <h3 className='arrayLabel'>Square:</h3>
                 <div className='flexRow' style={{gap:'10px'}}>

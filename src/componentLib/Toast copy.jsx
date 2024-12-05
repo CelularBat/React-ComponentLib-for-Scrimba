@@ -1,36 +1,31 @@
 import React from 'react';
 import MagicPortal from './_internal/MagicPortal';
 import Toast_static from './Toast_static';
-import useEffectOnUpdate from './_internal/useEffectOnUpdate';
 
 function Toast({posX="40vw",posY="70vh",timeOut,initialState=false,
     status,title,text,animated,
     children,...rest}) {
-
+        
     const [IsShowing,setIsShowing] = React.useState(initialState);
-    const tO_Ref = React.useRef(null); // handle to timeOut
+    const tO_Ref = React.useRef();
 
    
-
-
-    useEffectOnUpdate( ()=>{
+    React.useEffect( ()=>{
         setIsShowing(true);
-        if (timeOut) { // timeOut prop
-
+        if (timeOut) {
             if (tO_Ref.current) { 
                 clearTimeout(tO_Ref.current);
                 if (animated){
                     const toastElem = document.querySelector('.CompLib-Toast');
-                    
+                    console.log(toastElem);
+                    toastElem
                     // need way to reset animation !!!!!
-                                        
                    
                 }
                 
             } //reset timeout
             tO_Ref.current = setTimeout(()=>setIsShowing(false),timeOut);
         }
-
         return ()=>{
             if (tO_Ref.current) { clearTimeout(tO_Ref.current);}
         }

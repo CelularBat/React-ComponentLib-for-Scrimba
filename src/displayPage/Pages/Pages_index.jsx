@@ -5,8 +5,8 @@ import Testimonials from "./Testimonials";
 import Tooltips from "./Tooltips";
 import Toasts from "./Toasts";
 
-const Pages = [Badges,Banners,Cards,
-    Testimonials,
-    Tooltips,Toasts];
+const Pages = [Badges,Banners,Tooltips,Toasts,Cards,Testimonials
+    ];
 
-export default Pages;
+const Pages_labels = ["Badge","Banner","Tooltip","Toast","Card","Testimonial"];   
+export {Pages,Pages_labels};

@@ -331,20 +331,20 @@
 }
 @keyframes spawnAndMove1 {
     0% {
-        opacity: 0; /* Initial state: hidden */
+        opacity: 0; 
         transform: translateX(0);
     }
-    10% {
-        opacity: 1; /* Become visible quickly */
+    50% {
+        opacity: 1; 
         transform: translateX(0);
     }
-    60% {
-        opacity: 1; /* Stay in place */
+    80% {
+        opacity: 1;
         transform: translateX(0);
     }
     100% {
         opacity: 0;
-        transform: translateX(-50vw); /* Move left by 50% of the viewport width */
+        transform: translateX(-50vw); 
     }
 }
 
