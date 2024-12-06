@@ -9,6 +9,7 @@ function Toast({posX="40vw",posY="70vh",timeOut,initialState=false,
 
     const [IsShowing,setIsShowing] = React.useState(initialState);
     const tO_Ref = React.useRef(null); // handle to timeOut
+    const reRenderingFlag_Ref = React.useRef(false);
 
    
 
@@ -21,7 +22,7 @@ function Toast({posX="40vw",posY="70vh",timeOut,initialState=false,
                 clearTimeout(tO_Ref.current);
                 if (animated){
                     const toastElem = document.querySelector('.CompLib-Toast');
-                    
+                    reRenderingFlag_Ref.current = !reRenderingFlag_Ref.current;
                     // need way to reset animation !!!!!
                                         
                    
@@ -34,13 +35,14 @@ function Toast({posX="40vw",posY="70vh",timeOut,initialState=false,
         return ()=>{
             if (tO_Ref.current) { clearTimeout(tO_Ref.current);}
         }
-    },[children,posX,posY]);
+    },[children,posX,posY,status,text,timeOut,animated]);
 
     return (
         <>
         <MagicPortal {...{posX,posY}}>
             {IsShowing &&
-            <Toast_static {...rest} {...{status,title,text,animated}}
+            <Toast_static key={reRenderingFlag_Ref.current}
+            {...rest} {...{status,title,text,animated}}
              _animationTime={timeOut}  > 
                 {children}
             </Toast_static>}

@@ -3,7 +3,7 @@ import './compLib.css';
 import utils from './_internal/utils';
 import classNames from 'classnames';
 
-function Toast_static({status="success",title,text,children,
+function Toast_static({status,title,text,children,
     animated=false,_animationTime, style,...rest}) {
     const statuses = ["success",'warning',"error",'info'];
     utils.verifyProp("status",status,statuses);

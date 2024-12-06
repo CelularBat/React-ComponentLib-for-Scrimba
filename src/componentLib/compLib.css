@@ -334,7 +334,7 @@
         opacity: 0; 
         transform: translateX(0);
     }
-    50% {
+    20% {
         opacity: 1; 
         transform: translateX(0);
     }
