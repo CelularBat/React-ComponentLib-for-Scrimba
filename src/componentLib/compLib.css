@@ -418,5 +418,72 @@
     position:absolute;
 }
 
+/*Testimonial */
+.CompLib-Testimonial{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 24px;
+
+    width:90%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:48px;
+    margin-block:30px;
+}
+
+.CompLib-Testimonial .text-container{
+    padding-right:48px;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+.CompLib-Testimonial .text-container.noPic{
+    align-items: center;
+    justify-content: center;
+    padding:0 50px 0 50px;
+    text-align: center;
+
+}
+
+.CompLib-Testimonial .quotationMark{
+    opacity:25%;
+}
+
+.CompLib-Testimonial .img{
+    flex-shrink: 0;
+    width: 384px;
+    height: 464px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-left: 58px;
+    box-shadow: 0px 10px 10px -5px #0000000A;
+    box-shadow: 0px 20px 25px -5px #0000001A;
+
+}
+
+.CompLib-Testimonial .img > img{
+    height: auto;
+    width: 100%;
+    position: relative;
+    top:-55px;
+}
+
+.CompLib-Testimonial .author{
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.CompLib-Testimonial .job{
+    font-weight: 500;
+}
+
 
 
