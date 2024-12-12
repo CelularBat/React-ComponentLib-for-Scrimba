@@ -62,7 +62,7 @@ function  Tooltips({}) {
             <h1 className='pageTitle'>Tooltips</h1>
             <DisplayCode 
                 code= {`<CompLib.Tooltip colors="black|blue|pink|green|" type="bold|light" title="Title"
-posX="50vw" posY="10vh" timeOut={5000} {...rest}>
+posX="50vw" posY="300px" {...rest}>
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
 </CompLib.Tooltip>`} />
             
