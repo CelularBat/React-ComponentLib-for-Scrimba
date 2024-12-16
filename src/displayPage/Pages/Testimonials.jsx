@@ -2,10 +2,10 @@ import React from 'react';
 import CompLib from '../../componentLib/CompLib_index';
 import DisplayCode from '../components/DisplayCode';
 import workationLogo from "../../assets/workationLogo.svg"
-
+import portfolioIMG from "../../assets/portfolio.jpg"
 
 function  Testimonials({}) {
-    const img = <img src="https://s3-alpha-sig.figma.com/img/ebbd/218e/43da4fc0a30598c1777461ca480d0fde?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fq66dryV3NvyuIL7cLomfFk57Se6VF7DgVhuT1RrcufMe5PUpMwbfCV5stEfksD9nrhiJloGzHvKU6PuP4~9RjSsagw8OJNngMEsgKO383XT3a0ayH6DAS3ddR7bO5d9KKEeofCqhgN8eXsvvB0hxuENpYUG-haIz41u9o8~K2mJ8S5jtvOzZwfV~CYIeXAlrTzQhkpSpLHKeV8MOeNAQM6NxtnDpYwvGtGD2nwOssSSxRCH2DrimzIQhOIT3i5nlaQ7n3FpjC48WSKdLF7Dvg5uYueOK0RbH-EXTNJ5GsdPj5oPl7IIh34JLyFb0IzGrYfi6Cq7B9UWvH~HheMB8g__" />
+    const img = <img src={portfolioIMG} />
     const logo = <img src={workationLogo}/>
     return (
         <div className='Testimonials'>

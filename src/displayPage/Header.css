@@ -15,10 +15,10 @@
     background-size: 100% 100%, 100px 100px;
     box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.3),
                 0 5px 15px rgba(0, 0, 0, 0.5);
-    border: 4px solid #0d74bc;  /* A strong blue border to match React's color theme */
+    border: 1px solid #0d74bc;  /* A strong blue border to match React's color theme */
     
-    font-family: 'Roboto', sans-serif;  /* Use a modern sans-serif font */
-    color: #fff;  /* White text for contrast */
+    font-family: 'Roboto', sans-serif, monospace;  
+    color: #fff; 
    
 
     padding-bottom: 4px;;
@@ -40,8 +40,11 @@
 .Header >a{
     grid-area: a;
     font-family: Inter;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 .Header >span{
     grid-area: s;
+    font-size: 1.2rem;
+    
 }
