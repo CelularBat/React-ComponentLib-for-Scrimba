@@ -4,14 +4,24 @@ import { nanoid } from 'nanoid';
 import DisplayCode from '../components/DisplayCode';
 
 function  Toasts({}) {
-    const [PickedToastType,setPickedToastType] = React.useState();
+    const [PickedToastType,setPickedToastType] = React.useState("info");
+    const [PickedToasttitle,setPickedToasttitle] = React.useState("Hello!");
+    const [PickedToastText,setPickedToastText] = React.useState("Click on example to try me out!");
+
+    
 
     const statuses = ["success",'warning',"error",'info'];
 
     const showStatuses = statuses.map((status) => { 
       return(
         <CompLib._Toast_static key={nanoid()} status={status} 
-        onClick={()=>setPickedToastType(status)} style={{cursor:"grab"}}>
+        onClick={()=>{
+                setPickedToastType(status) ;
+                setPickedToastText(`Toast status="${status}"`) 
+                
+            }
+        }
+        style={{cursor:"grab"}}>
 
         </CompLib._Toast_static>); 
     });
@@ -32,10 +42,11 @@ posX="50vw" posY="10vh" timeOut={5000} animated={true|false} {...rest}>
             
             { PickedToastType && 
                 
-                    <CompLib.Toast status={PickedToastType} title="Test !"
-                    posY="10vh" posX="50vw" timeOut={5000} animated={true}
+                    <CompLib.Toast status={PickedToastType} title={PickedToasttitle}
+                    posY="15vh" posX="65vw" timeOut={5000} animated={true}
                     >
-                        Toast status="{PickedToastType}"
+                        {PickedToastText}
+                       
                     </CompLib.Toast>
                
             }
