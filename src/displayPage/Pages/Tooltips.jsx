@@ -9,10 +9,10 @@ function  Tooltips({}) {
     const styles = ["light","bold"];
 
      const [TooltipProps,setTooltipProps] = React.useState(
-        {color: "black",
+        {color: "green",
         type:"light", 
-        title:'Check me out!',
-        text: "Check me out!",
+        title:'Click on example',
+        text: "to see it working",
         posX: "3000px",
         posY: "3000px"
 
@@ -26,6 +26,7 @@ function  Tooltips({}) {
         onClick={(e)=>{setTooltipProps( prev=>
             ({...prev,
                 color: color,
+                title:'Check me out!',
                 type: "light",
                 text: `type="light" color="${color}"`,
                 posX: `${e.clientX}px`,
